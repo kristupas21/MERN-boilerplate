@@ -1,0 +1,9 @@
+.app-header {
+    @include grainyBackground($color-primary);
+    color: $white;
+    font-family: $font-heading;
+    font-size: 22px;
+    letter-spacing: .7px;
+    height: 80px;
+    width: 100%;
+}

@@ -1,0 +1,62 @@
+.wk-cover {
+    @include rect(490px);
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+    color: #202325;
+    font-family: $font-weeknd;
+    font-weight: 700;
+
+    &__wrapper {
+        box-sizing: border-box;
+        padding: 13px;
+        width: 100%;
+    }
+
+    &__heading {
+        border-bottom: 2px solid #a5adaf;
+        font-size: 50px;
+        letter-spacing: -3.6px;
+    }
+    &__label {
+        @include flex-container($justify: flex-start);
+        padding: 1px 0;
+    }
+    &__sub-heading {
+        font-size: 26px;
+        letter-spacing: -1px;
+        padding-left: 5px;
+    }
+    &__items {
+        border-bottom: 1.4px solid #c1c7c8;
+        font-size: 10.2px;
+        line-height: 13px;
+        padding-bottom: 3px;
+    }
+    &__cube {
+        @include rect(22px);
+        display: inline-block;
+    }
+    &__img {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    &__footer {
+        @include flex-container($direction: column, $align: flex-end);
+        border-top: 2px solid #a5adaf;
+        margin: 4px 13px 0 13px;
+        line-height: 12px;
+
+        .wk-cover__cube {
+            @include rect(8px);
+        }
+    }
+    &__copyright {
+        font-size: 5px;
+    }
+}
+
+@each $num, $col in $cols {
+    .wk-cover__cube-#{$num} {
+        background: $col;
+    }
+}

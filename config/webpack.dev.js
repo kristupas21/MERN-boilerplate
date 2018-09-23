@@ -23,5 +23,18 @@ module.exports = merge(commonConfig, {
     contentBase: './client/public',
     historyApiFallback: true,
     stats: 'minimal' // none (or false), errors-only, minimal, normal (or true) and verbose
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {}
+          }
+        ]
+      }
+    ]
   }
 });

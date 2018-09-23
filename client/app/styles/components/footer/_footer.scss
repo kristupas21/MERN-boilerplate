@@ -1,0 +1,10 @@
+.app-footer {
+    $_footer-bkg: $color-secondary-2;
+
+    @include grainyBackground($_footer-bkg);
+    @include imprintText($_footer-bkg);
+    @include flex-container();
+    height: 80px;
+    text-align: center;
+    width: 100%;
+}

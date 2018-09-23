@@ -1,0 +1,18 @@
+body {
+    color: $off-black;
+    font-family: $font-base;
+    font-weight: 400;
+    height: 100vh;
+    min-height: 540px;
+    min-width: 360px;
+    width: 100vw;
+}
+
+a {
+    font-family: inherit;
+    text-decoration: none;
+
+    &:visited {
+        color: inherit;
+    }
+}

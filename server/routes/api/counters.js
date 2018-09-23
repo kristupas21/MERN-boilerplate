@@ -10,7 +10,7 @@ module.exports = (app) => {
 
   app.post('/api/counters', function (req, res, next) {
     const counter = new Counter();
-
+      console.log('posting');
     counter.save()
       .then(() => res.json(counter))
       .catch((err) => next(err));

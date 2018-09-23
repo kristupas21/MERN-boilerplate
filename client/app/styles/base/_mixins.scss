@@ -1,0 +1,28 @@
+$grain-bkg: url('../../public/assets/img/grain.png');
+$grain-light-bkg: url('../../public/assets/img/grain-light.png');
+
+@mixin grainyBackground($color: #ccc, $light: false) {
+    @if $light == true {
+        background: $color $grain-light-bkg;
+    } @else {
+        background: $color $grain-bkg;
+    }
+}
+
+@mixin flex-container($display: flex, $align: center, $justify: center, $direction: row, $wrap: nowrap) {
+    align-items: $align;
+    display: $display;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+}
+
+@mixin rect($length: 100%) {
+    height: $length;
+    width: $length;
+}
+
+@mixin imprintText($color: #fff, $size: 1px) {
+    color: darken($color, 22);
+    text-shadow: 0 $size 0 lighten($color, 14); 
+}

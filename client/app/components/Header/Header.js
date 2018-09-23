@@ -3,14 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
-  <header>
-    <Link to="/">Home</Link>
-
+  <header className="app-header">
     <nav>
-      <Link to="/helloworld">Hello World</Link>
+    <Link to="/">Home</Link>
     </nav>
-
-    <hr />
   </header>
 );
 
